@@ -7,7 +7,9 @@ import os
 from PIL import Image
 from transformers import AutoImageProcessor, SiglipForImageClassification
 
-app = Flask(__name__, template_folder='templates', static_folder='static')CORS(app)
+# Création de l'application Flask et activation de CORS
+app = Flask(__name__, template_folder='templates', static_folder='static')
+CORS(app)
 
 # Chargement intelligent du modèle
 MODEL_ID = "Ateeqq/ai-vs-human-image-detector"
