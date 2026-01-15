@@ -35,8 +35,7 @@ analyzeBtn.onclick = async () => {
     fd.append('file', fileToUpload);
 
     try {
-        const res = await fetch('http://localhost:5000/analyze', { method: 'POST', body: fd });
-        const data = await res.json();
+        const res = await fetch('/analyze', { method: 'POST', body: fd });        const data = await res.json();
 
         // Affichage résultats
         const box = document.getElementById('result-box');

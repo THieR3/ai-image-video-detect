@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import torch
 import cv2
@@ -7,8 +7,7 @@ import os
 from PIL import Image
 from transformers import AutoImageProcessor, SiglipForImageClassification
 
-app = Flask(__name__)
-CORS(app)
+app = Flask(__name__, template_folder='templates', static_folder='static')CORS(app)
 
 # Chargement intelligent du modèle
 MODEL_ID = "Ateeqq/ai-vs-human-image-detector"
@@ -22,6 +21,10 @@ try:
     print("✅ Prêt !")
 except Exception as e:
     print(f"❌ Erreur : {e}")
+@app.route('/')
+def home():
+    # Flask va chercher dans le dossier /templates/ automatiquement
+    return render_template('index.html')
 
 @app.route('/analyze', methods=['POST'])
 def handle_prediction():

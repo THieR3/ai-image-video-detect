@@ -3,4 +3,5 @@ flask-cors
 torch
 transformers
 pillow
-opencv-python
+opencv-python-headless
+gunicorn
