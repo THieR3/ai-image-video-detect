@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video & Image AI Detector | Détecteur Sora & Deepfakes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="ads-left">
+            <div class="ad-label">SPONSORISÉ</div>
+            <div class="ad-placeholder">Publicité Google Ads</div>
+        </aside>
+
+        <div class="main-content">
+            <header class="navbar">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Logo AI Detector">
+                    <span>AI video & image Detector</span>
+                </div>
+                <nav>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#blog">Ressources</a>
+                    <a href="#faq">FAQ</a>
+                    <div class="credit-pill"><i class="fas fa-coins"></i> <span id="credit-count">100</span></div>
+                </nav>
+            </header>
+
+            <section class="hero">
+                <h1>Free AI Detector for Video and Images</h1>
+                <p>Détectez instantanément les contenus générés par Sora AI, Midjourney et les Deepfakes.</p>
+                
+                <div id="drop-zone" class="drop-zone">
+                    <i class="fas fa-upload fa-2x"></i>
+                    <p>Déposez votre fichier ici ou <span>parcourez vos dossiers</span></p>
+                    <small id="selected-file-name"></small>
+                    <input type="file" id="file-input" hidden accept="image/*,video/*">
+                </div>
+                <button id="analyze-btn" class="btn-main" disabled>Detect AI Content Now</button>
+            </section>
+
+            <div id="result-box" class="result-card hidden">
+                <div class="verdict-header">
+                    <h2 id="res-verdict">--</h2>
+                    <p>Confiance : <strong id="res-conf">0%</strong></p>
+                </div>
+                <div class="progress-container"><div id="res-bar" class="progress-bar"></div></div>
+            </div>
+
+            <hr class="divider">
+
+            <section class="blog-section" id="blog">
+                <h2 class="section-title">Dernières Actualités & Guides</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-tag">Innovation</div>
+                        <h3>Sora AI : Comment démasquer les vidéos d'OpenAI ?</h3>
+                        <p>L'arrivée de Sora AI a bouleversé la vidéo. Notre outil analyse la cohérence temporelle pour repérer les anomalies invisibles à l'œil nu...</p>
+                        <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-tag">Sécurité</div>
+                        <h3>La menace des Deepfakes en 2026</h3>
+                        <p>Le Deepfake est un enjeu de sécurité majeur. Nous utilisons l'analyse de fréquence pour identifier les visages synthétiques et protéger votre identité...</p>
+                        <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-tag">Technologie</div>
+                        <h3>Comment fonctionne notre algorithme ?</h3>
+                        <p>Découvrez comment nous utilisons le modèle Siglip pour examiner les structures de pixels et les métadonnées cachées de vos médias...</p>
+                        <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="faq-section" id="faq">
+                <h2 class="section-title">Questions Fréquentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>Quels formats sont supportés ?</h4>
+                        <p>Nous acceptons les images (JPG, PNG) et les vidéos (MP4, MOV).</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>L'analyse est-elle confidentielle ?</h4>
+                        <p>Oui, vos fichiers sont supprimés de nos serveurs immédiatement après l'analyse.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <i class="fas fa-crown fa-3x" style="color: #f59e0b;"></i>
+            <h2>Crédits épuisés</h2>
+            <p>Passez à l'accès illimité à vie pour seulement 5$.</p>
+            <button onclick="buy()" class="btn-main">Acheter maintenant (5$)</button>
+            <button onclick="closeM()" class="btn-flat">Plus tard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
